@@ -8,4 +8,5 @@ import com.springwebflux.bootcamp.service.saving.app.model.Saving;
 @Repository
 public interface IsavingRepository extends ReactiveMongoRepository<Saving, String>{
 
+	
 }
