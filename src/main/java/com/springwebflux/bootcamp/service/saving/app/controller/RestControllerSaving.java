@@ -8,16 +8,12 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.springwebflux.bootcamp.service.saving.app.services.SavingServicesImplement;
 import com.springwebflux.bootcamp.service.saving.app.model.Saving;
- 
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-
 @RestController
 @RequestMapping("api")
-
 public class RestControllerSaving {
 
 @Autowired 
@@ -45,14 +41,14 @@ SavingServicesImplement implement;
 		return implement.updateSaving(saving);		
 	}
 
- @GetMapping("/getSavingDni/{id}")
-	Mono<Saving>getSavingId(@PathVariable String id){		
-		return implement.getSavingId(id);		
+ @GetMapping("/getSavingId/{Id}")
+	Mono<Saving>getSavingId(@PathVariable String Id){		
+		return implement.getSavingId(Id);		
 	}
 	
  @GetMapping("/txt")
 	public String txt(){		
-		return "hola";		
+		return "Bienvenido al Microservicio Saving";		
 	}
 
 
